@@ -9,7 +9,14 @@ let naoEhUmNumero = NaN;
 let numero = NaN;
 
 // Array
-let alunos = [["Meu aluno 1", 20, NaN, true]];
+let alunos = [
+  [
+    "Meu aluno 1", 
+    20, 
+    NaN, 
+    true
+  ]
+];
 
 // Object
 let turma = {
