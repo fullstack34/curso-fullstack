@@ -1,8 +1,11 @@
+let email = "admin@admin.com";
 
-// Criar uma variavel chamada email
+if (email === "admin@admin.com"){
+  
+  console.log('Logado!')
 
-// Verificar se a variavel é igual a admin@admin.com
+} else {
 
-// Caso true: Exibir a msg "Logado!"
+  console.log('Erro ao fazer login!')
 
-// Caso false: Exibir a msg "Erro ao fazer login!"
+}
