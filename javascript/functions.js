@@ -20,7 +20,7 @@ function converterEmLetrasMaiusculas(aluno) {
 let letras = converterEmLetrasMaiusculas(nomeDoAluno);
 
 let soma = function(n1, n2) {
-  return n1 + n2
+  return n1 + n2;
 }
 
 let subtrair = function(n1, n2) {
