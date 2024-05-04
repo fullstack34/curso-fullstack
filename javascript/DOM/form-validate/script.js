@@ -13,7 +13,7 @@ const showSenhaError = (msg) => {
   elements.senhaError.textContent = msg;
 }
 
-const showError (msg, elementId) => {
+const showError = (msg, elementId) => {
   document.getElementById(elementId).textContent = msg;
 }
 
