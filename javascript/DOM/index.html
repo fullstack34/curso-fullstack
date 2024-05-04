@@ -30,8 +30,14 @@
 
     formContador.addEventListener('submit', function(event) {
       event.preventDefault();
-      console.log(inputNumeroInicial.value);
-      console.log(inputNumeroFinal.value);
+
+      let numeroInicial = parseInt(inputNumeroInicial.value);
+      let numeroFinal = parseInt(inputNumeroFinal.value);
+
+      for(let index = numeroInicial; index <= numeroFinal; index++) {
+        output.innerHTML += "<strong>" + index + "</strong><br>";
+      }
+
     });
 
     
