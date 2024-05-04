@@ -4,23 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    .error {
+      color: red;
+    }
+  </style>
 </head>
 <body>
-  <form action="deubom.html">
+  <form action="deubom.html" id="form-login">
     <div>
       <label for="">Email</label>
       <br>
-      <input type="text">
+      <input type="text" id="input-email">
+      <br>
+      <span class="error" id="email-error">sdfsdfa</span>
     </div>
     <div>
       <label for="">Senha</label>
       <br>
-      <input type="text">
+      <input type="text" id="input-senha">
+      <br>
+      <span class="error" id="senha-error">sdfsdfs</span>
     </div>
     <div>
       <button>ENTRAR</button>
     </div>
   </form>
+
   <script src="script.js"></script>
 </body>
 </html>
