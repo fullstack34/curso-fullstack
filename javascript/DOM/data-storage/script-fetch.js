@@ -1,9 +1,14 @@
 let todoList = document.getElementById('todo-list');
 
-const addTaskHtml = (value) => {
+const addTaskHtml = (task) => {
   let li = document.createElement('li');
   let inputCheckbox = document.createElement('input');
   inputCheckbox.type = 'checkbox';
+  inputCheckbox.checked = task.completed
+
+  if(task.completed) {
+    li.style.textDecoration = "line-through"
+  }
 
   li.addEventListener('dblclick', event => {
     if(!li.style.textDecoration) {
@@ -14,7 +19,7 @@ const addTaskHtml = (value) => {
     inputCheckbox.checked = !inputCheckbox.checked;
   });
   
-  li.textContent = value;
+  li.textContent = task.todo;
   li.prepend(inputCheckbox);
   todoList.append(li);
 }
@@ -25,6 +30,6 @@ let request = fetch(url)
 .then(response => response.json())
 .then(json =>  {
   for(let task of json.todos) {
-    addTaskHtml(task.todo);
+    addTaskHtml(task);
   }
 })
