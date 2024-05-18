@@ -9,6 +9,15 @@ const addTaskHtml = (task) => {
   if(task.completed) {
     li.style.textDecoration = "line-through"
   }
+  
+  inputCheckbox.addEventListener('change', event => {
+    if(event.target.checked){
+      li.style.textDecoration = "line-through";
+    }
+    else {
+      li.style.textDecoration = "";
+    }
+  })
 
   li.addEventListener('dblclick', event => {
     if(!li.style.textDecoration) {
