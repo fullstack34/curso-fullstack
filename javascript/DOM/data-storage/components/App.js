@@ -1,4 +1,5 @@
 import TaskList from "./TaskList.js";
+import TodoForm from './TodoForm.js';
 
 export default function App() {
   
@@ -8,7 +9,11 @@ export default function App() {
   .then(response => response.json())
   .then(json =>  {
     console.log(json.todos);
-    return TaskList({tasks: json.todos})
+    return `
+      ${TodoForm()}
+      <hr>
+      ${TaskList({tasks: json.todos})}
+    `;
   })
 
 }

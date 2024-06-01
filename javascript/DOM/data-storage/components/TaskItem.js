@@ -4,7 +4,15 @@ import { useEvent } from "../hooks.js";
 export default function TaskItem (props) {
 
   let liClick = useEvent('dblclick',  function liClick(event) {
-    console.log(event.target);
+      let isCompleted = event.target.classList.contains('completed');
+      let input = event.target.querySelector('input');
+      
+      input.checked = !input.checked;
+      if(isCompleted) {
+        event.target.classList.remove('completed')
+      } else {
+        event.target.classList.add('completed')
+      }
   });
   
   return `
