@@ -1,14 +1,14 @@
 import TaskList from "./TaskList.js";
 
 export default function App() {
-  let taskList = [
-    {completed: true, content: "task 1"},
-    {completed: false, content: "task 2"},
-    {completed: true, content: "task 3"},
-    {completed: false, content: "task 4"},
-  ]
+  
+  let url = 'https://dummyjson.com/todos';
 
-  let tasks = TaskList({tasks: taskList})
+  return fetch(url)
+  .then(response => response.json())
+  .then(json =>  {
+    console.log(json.todos);
+    return TaskList({tasks: json.todos})
+  })
 
-  return tasks;
 }

@@ -1,10 +1,10 @@
-                        // click    // clickLi     // 123
+                // dblclick    // function liClick     // []
 export function useEvent(eventName, eventFunction, eventParams = []) {
-          // clickLi => window['clickLi'] = function ....
+  // window[liClick] = function liClick...
   window[eventFunction.name] = eventFunction;
 
-          // onclick="clickLi(123)"
-  return `on${eventName}="${eventFunction.name}(${eventParams})"`;
+          // ondblclick="liClick([])"
+  return `on${eventName}="${eventFunction.name}(event, ${eventParams})"`;
 }
 
 // TaskItem.js
